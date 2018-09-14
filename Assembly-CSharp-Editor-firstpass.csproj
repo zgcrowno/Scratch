@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{33EF959E-D6E1-86EA-8299-A60377245E13}</ProjectGuid>
+    <ProjectGuid>{122EA350-FD0D-E4CC-2E46-162F240AAFC3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor-firstpass</AssemblyName>
@@ -76,10 +76,10 @@
     <Compile Include="Assets\Standard Assets\Editor\ImageEffects\TonemappingEditor.cs" />
     <Compile Include="Assets\Standard Assets\Editor\ImageEffects\VignetteAndChromaticAberrationEditor.cs" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Public/Documents/Unity Projects/First Person Practice/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Public/Documents/Unity Projects/Scratch/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Public/Documents/Unity Projects/First Person Practice/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Public/Documents/Unity Projects/Scratch/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -381,7 +381,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{E2232734-BA44-5F31-B096-9880158AE55C}</Project>
+      <Project>{6F1A3682-B7EE-EDF4-7F5E-F8F64FD749E8}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

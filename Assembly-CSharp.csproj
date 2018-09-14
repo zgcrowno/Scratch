@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{EBEB9626-BF11-E136-32B5-EDA682BC8019}</ProjectGuid>
+    <ProjectGuid>{8885CFC3-33C4-48B6-8B52-F02F804A084E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -75,10 +75,10 @@
     <None Include="Assets\Shaders\CrossHatch.shader" />
     <None Include="Assets\Shaders\HandDrawnShader.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Public/Documents/Unity Projects/First Person Practice/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Public/Documents/Unity Projects/Scratch/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Public/Documents/Unity Projects/First Person Practice/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Public/Documents/Unity Projects/Scratch/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -314,7 +314,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{E2232734-BA44-5F31-B096-9880158AE55C}</Project>
+      <Project>{6F1A3682-B7EE-EDF4-7F5E-F8F64FD749E8}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

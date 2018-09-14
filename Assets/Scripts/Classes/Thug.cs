@@ -13,6 +13,8 @@ public class Thug : Character {
         hp = 200f;
         speed = 15.0f;
         gravity = -9.8f;
+        jumpStrength = 20f;
+        jumpGravity = 25f;
     }
 	
 	// Update is called once per frame

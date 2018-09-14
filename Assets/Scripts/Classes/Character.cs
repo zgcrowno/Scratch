@@ -15,7 +15,8 @@ public abstract class Character : Entity {
     public static readonly int Illusionist = 8;
     public static readonly int Berserker = 9;
 
-    public float jumpHeight;
+    public float jumpStrength;
+    public float jumpGravity;
 
 	// Use this for initialization
 	void Start () {
