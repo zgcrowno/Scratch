@@ -30,6 +30,10 @@ public class Player : MonoBehaviour {
         {
             Primary();
         }
+        else if(Input.GetButtonDown("Fire2"))
+        {
+            Secondary();
+        }
     
         Move();
         Jump();

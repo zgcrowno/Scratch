@@ -5,12 +5,10 @@ using UnityEngine;
 //TODO: Eventually use object pooling to conserve memory
 public class BulletBehavior : MonoBehaviour {
 
-    public static float MAX_DIVERGENCE = 5;
-
     public GameObject bloodSpatter;
+    public GameObject impactEffect;
     public float damage = 5f;
-    public float speed = 60f;
-    public Vector3 divergence = Vector3.zero;
+    public float speed = 120f;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -28,13 +26,15 @@ public class BulletBehavior : MonoBehaviour {
             Enemy enemyScript = collidedObj.GetComponent<Enemy>();
             enemyScript.TakeDamage(damage);
         }
+        else
+        {
+            //Instantiate(impactEffect, collision.contacts[0].point, Quaternion.LookRotation(collision.contacts[0].normal));
+        }
     }
 
     // Use this for initialization
     void Start () {
-        divergence.x = (1 - 2 * Random.value) * MAX_DIVERGENCE;
-        divergence.y = (1 - 2 * Random.value) * MAX_DIVERGENCE;
-        GetComponent<Transform>().Rotate(divergence);
+        
 	}
 	
 	// Update is called once per frame
