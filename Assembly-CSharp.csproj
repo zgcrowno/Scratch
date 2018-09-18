@@ -109,6 +109,7 @@
     <Compile Include="Assets\Scripts\Classes\Entity.cs" />
     <Compile Include="Assets\Scripts\Classes\Player.cs" />
     <Compile Include="Assets\Scripts\Classes\Thug.cs" />
+    <Compile Include="Assets\Scripts\ObjectPooler.cs" />
     <Compile Include="Assets\Scripts\WeaponBob.cs" />
     <None Include="Assets\Asset Store\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\Asset Store\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BlendOneOne.shader" />

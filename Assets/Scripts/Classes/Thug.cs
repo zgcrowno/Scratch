@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Thug : Character {
 
+    ObjectPooler objectPooler;
+
+    public GameObject bulletTrail;
     public static int NumShotgunBullets = 6;
     public static int NumPistolBullets = 1;
     
@@ -12,6 +15,8 @@ public class Thug : Character {
     private float pistolFireRate = 0.25f;
     private float shotgunRange = 20f;
     private float pistolRange = 30f;
+    private float shotgunDamage = 10f;
+    private float pistolDamage = 25f;
 
     private bool primaryEquipped; //Used to switch between primary and secondary weapons
     private float nextFire; //The time at which the player will be able to fire again after firing
@@ -24,12 +29,13 @@ public class Thug : Character {
     public Sprite pistolCrosshair;
     public GameObject bulletSpawnShotgun;
     public GameObject bulletSpawnPistol;
-    public GameObject[] bulletPrefabArray;
     public ParticleSystem muzzleFlashShotgun;
     public ParticleSystem muzzleFlashPistol;
 
     // Use this for initialization
     void Start () {
+        objectPooler = ObjectPooler.Instance;
+
         hp = 200f;
         speed = 15.0f;
         gravity = -9.8f;
@@ -98,7 +104,7 @@ public class Thug : Character {
         if (Time.time > nextFire) //Ensure enough time has passed to allow for further firing
         {
             nextFire = Time.time + fireRate;
-
+            
             muzzleFlash.Play();
 
             for (int i = 0; i < numBullets; i++)
@@ -115,12 +121,25 @@ public class Thug : Character {
                 Vector3 rayOrigin = weaponCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0)); //The center of the camera
                 RaycastHit hit; //Will hold hit data from the raycast
 
-                bulletPrefabArray[i] = Instantiate(bulletPrefabArray[i], bulletSpawn.transform.position, bulletSpawn.transform.rotation);
-                bulletPrefabArray[i].SetActive(true);
+                bulletTrail = objectPooler.SpawnFromPool("Bullet Trail", bulletSpawn.transform.position, bulletSpawn.transform.rotation);
 
-                if (Physics.Raycast(rayOrigin, direction, out hit, fireRange)) //Ray has hit an object in its range
+                if (Physics.Raycast(rayOrigin, direction, out hit)) //Ray has hit an object
                 {
-                    bulletPrefabArray[i].GetComponent<Transform>().LookAt(hit.point);
+                    bulletTrail.transform.LookAt(hit.point); //Orient trail so it has correct trajectory
+
+                    //Apply damage and particle effects here to achieve greater accuracy than using collisions in BulletBehavior
+                    Enemy enemy = hit.collider.GetComponent<Enemy>();
+                    if(enemy != null)
+                    {
+                        float damage = primaryEquipped ? shotgunDamage : pistolDamage;
+                        enemy.TakeDamage(damage);
+
+                        objectPooler.SpawnFromPool("Blood Spatter", hit.point, Quaternion.LookRotation(hit.normal));
+                    }
+                    else
+                    {
+                        objectPooler.SpawnFromPool("Impact Effect", hit.point, Quaternion.LookRotation(hit.normal));
+                    }
 
                     //Uncomment if I want to add force to shot
                     //if(hit.rigidbody != null)
@@ -130,7 +149,7 @@ public class Thug : Character {
                 }
                 else //Ray hasn't hit an object
                 {
-                    bulletPrefabArray[i].GetComponent<Transform>().LookAt(rayOrigin + (direction * fireRange));
+                    bulletTrail.transform.LookAt(rayOrigin + (direction * fireRange)); //Orient trail so it has correct trajectory
                 }
             }
         } 
