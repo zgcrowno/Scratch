@@ -15,11 +15,13 @@ public abstract class Weapon : MonoBehaviour {
     public Animator animator;
     public Camera weaponCam;
     public Sprite crosshair;
+    public ObjectPooler pooler;
 
 	// Use this for initialization
 	protected void Start () {
         animator = GetComponent<Animator>();
         weaponCam = transform.parent.parent.GetComponentInParent<Camera>();
+        pooler = GameObject.Find("/World/Object Pooler").GetComponent<ObjectPooler>();
     }
 	
 	// Update is called once per frame
@@ -28,7 +30,7 @@ public abstract class Weapon : MonoBehaviour {
 	}
 
     //Activate the weapon's primary ability
-    public abstract void Primary(ObjectPooler pooler);
+    public abstract void Primary();
 
     //Activate the weapon's secondary ability
     public abstract void Secondary();
@@ -37,5 +39,5 @@ public abstract class Weapon : MonoBehaviour {
     public abstract void Tertiary();
 
     //Activate the weapon's melee ability
-    public abstract void Melee(ObjectPooler pooler);
+    public abstract void Melee();
 }

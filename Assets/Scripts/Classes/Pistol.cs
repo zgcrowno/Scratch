@@ -23,7 +23,7 @@ public class Pistol : Weapon {
 		
 	}
 
-    public override void Primary(ObjectPooler pooler)
+    public override void Primary()
     {
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 
@@ -72,15 +72,15 @@ public class Pistol : Weapon {
 
     public override void Secondary()
     {
-
+        //No Implemented Secondary ability
     }
 
     public override void Tertiary()
     {
-
+        //No Implemented Tertiary ability
     }
 
-    public override void Melee(ObjectPooler pooler)
+    public override void Melee()
     {
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 

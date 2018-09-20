@@ -25,7 +25,7 @@ public class Shotgun : Weapon {
 		
 	}
 
-    public override void Primary(ObjectPooler pooler)
+    public override void Primary()
     {
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 
@@ -83,15 +83,15 @@ public class Shotgun : Weapon {
 
     public override void Secondary()
     {
-        
+        //No implemented Secondary ability
     }
 
     public override void Tertiary()
     {
-        
+        //No implemented Tertiary ability
     }
 
-    public override void Melee(ObjectPooler pooler)
+    public override void Melee()
     {
         AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 

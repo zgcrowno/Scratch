@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class Thug : Character {
 
-    public ObjectPooler objectPooler;
+    private float tertiaryForce = 20f;
+
+    private ObjectPooler pooler;
     private GameObject shotgun;
     private GameObject pistol;
     private GameObject crosshair;
@@ -25,7 +27,7 @@ public class Thug : Character {
         jumpGravity = 25f;
 
         //Thug data
-        objectPooler = ObjectPooler.Instance;
+        pooler = GameObject.Find("/World/Object Pooler").GetComponent<ObjectPooler>();
         shotgun = transform.Find("Shotgun").gameObject;
         shotgunWeaponScript = shotgun.GetComponent<Weapon>();
         pistol = transform.Find("Pistol").gameObject;
@@ -42,7 +44,7 @@ public class Thug : Character {
     //Activate the character's primary ability
     public override void Primary()
     {
-        currentWeapon.Primary(objectPooler);
+        currentWeapon.Primary();
     }
 
     //Activate the character's secondary ability
@@ -72,12 +74,14 @@ public class Thug : Character {
     //Activate the character's tertiary ability
     public override void Tertiary()
     {
-        
+        GameObject pipeBomb = pooler.SpawnFromPool("Pipe Bomb", transform.position, transform.rotation);
+        Rigidbody rb = pipeBomb.GetComponent<Rigidbody>();
+        rb.AddForce(transform.right * tertiaryForce, ForceMode.VelocityChange); //Using transform.right because thug is incorrectly rotated by default; using ForceMode.VelocityChange so velocity is not constant
     }
 
     //Activate the character's melee ability
     public override void Melee()
     {
-        currentWeapon.Melee(objectPooler);
+        currentWeapon.Melee();
     }
 }

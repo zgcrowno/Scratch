@@ -99,6 +99,13 @@
     <Compile Include="Assets\Asset Store\Standard Assets\Effects\ImageEffects\Scripts\Twirl.cs" />
     <Compile Include="Assets\Asset Store\Standard Assets\Effects\ImageEffects\Scripts\VignetteAndChromaticAberration.cs" />
     <Compile Include="Assets\Asset Store\Standard Assets\Effects\ImageEffects\Scripts\Vortex.cs" />
+    <Compile Include="Assets\Downloaded Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
+    <Compile Include="Assets\Downloaded Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
+    <Compile Include="Assets\Downloaded Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
+    <Compile Include="Assets\Downloaded Assets\EffectExamples\Shared\Scripts\GunShoot.cs" />
+    <Compile Include="Assets\Downloaded Assets\EffectExamples\Shared\Scripts\ParticleCollision.cs" />
+    <Compile Include="Assets\Downloaded Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
+    <Compile Include="Assets\Downloaded Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
     <Compile Include="Assets\Scripts\BulletBehavior.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraControl.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraRenderTexture.cs" />
@@ -107,6 +114,7 @@
     <Compile Include="Assets\Scripts\Classes\Character.cs" />
     <Compile Include="Assets\Scripts\Classes\Enemy.cs" />
     <Compile Include="Assets\Scripts\Classes\Entity.cs" />
+    <Compile Include="Assets\Scripts\Classes\PipeBomb.cs" />
     <Compile Include="Assets\Scripts\Classes\Pistol.cs" />
     <Compile Include="Assets\Scripts\Classes\Player.cs" />
     <Compile Include="Assets\Scripts\Classes\Shotgun.cs" />
@@ -121,6 +129,7 @@
     <None Include="Assets\Asset Store\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
     <None Include="Assets\Asset Store\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
     <None Include="Assets\Asset Store\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
+    <None Include="Assets\Downloaded Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
     <None Include="Assets\Asset Store\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
     <None Include="Assets\Asset Store\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
     <None Include="Assets\Asset Store\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
