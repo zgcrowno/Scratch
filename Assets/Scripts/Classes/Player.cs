@@ -34,6 +34,10 @@ public class Player : MonoBehaviour {
         {
             Secondary();
         }
+        else if(Input.GetButtonDown("Melee"))
+        {
+            Melee();
+        }
     
         Move();
         Jump();

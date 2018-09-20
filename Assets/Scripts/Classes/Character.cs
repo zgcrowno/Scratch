@@ -18,6 +18,8 @@ public abstract class Character : Entity {
     public float jumpStrength;
     public float jumpGravity;
 
+    protected GameObject weapon;
+
 	// Use this for initialization
 	void Start () {
 		

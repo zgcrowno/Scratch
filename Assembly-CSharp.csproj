@@ -107,8 +107,11 @@
     <Compile Include="Assets\Scripts\Classes\Character.cs" />
     <Compile Include="Assets\Scripts\Classes\Enemy.cs" />
     <Compile Include="Assets\Scripts\Classes\Entity.cs" />
+    <Compile Include="Assets\Scripts\Classes\Pistol.cs" />
     <Compile Include="Assets\Scripts\Classes\Player.cs" />
+    <Compile Include="Assets\Scripts\Classes\Shotgun.cs" />
     <Compile Include="Assets\Scripts\Classes\Thug.cs" />
+    <Compile Include="Assets\Scripts\Classes\Weapon.cs" />
     <Compile Include="Assets\Scripts\ObjectPooler.cs" />
     <Compile Include="Assets\Scripts\WeaponBob.cs" />
     <None Include="Assets\Asset Store\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
